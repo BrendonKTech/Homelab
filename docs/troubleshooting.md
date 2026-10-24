@@ -9,13 +9,9 @@ Problems I ran into while building the homelab and how I fixed them.
 - **Fix:** As the tailnet admin, I finished the setup from the admin console by adding their information so their devices could connect.
 - **Lesson:** When onboarding non-technical users, handle the admin side first and walk them through the app in person. Write the steps down for next time.
 
----
+### Problem: Raspberry Pi issue (Adding later)
 
-## Template
-
-### Problem: <short description>
-
-- **Symptom:** what I saw
-- **Cause:** what was actually wrong
-- **Fix:** what I changed
-- **Lesson:** what I'd do differently next time
+- **Symptom:** > 
+- **Cause:** > 
+- **Fix:** > 
+- **Lesson:** > 
