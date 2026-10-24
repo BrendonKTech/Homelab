@@ -67,14 +67,26 @@ The media server doesn't need to run all day, so the Raspberry Pi handles turnin
 
 This means I can power the server on from anywhere when someone wants to use it and shut it down when it's idle, which cuts idle power use.
 
-Example commands (placeholders, not my real values):
+The scripts are in [`scripts/`](scripts/), and the full setup is in [docs/wake-on-lan.md](docs/wake-on-lan.md).
 
-```bash
-# Wake the server
-wakeonlan <SERVER_MAC_ADDRESS>
+## Repository Layout
 
-# Shut the server down
-ssh <user>@<server-ip> "sudo shutdown -h now"
+```
+Homelab/
+├── README.md
+├── docs/
+│   ├── proxmox.md          # Hypervisor install and setup
+│   ├── jellyfin.md         # Media server setup and libraries
+│   ├── tailscale.md        # Remote access without open ports
+│   ├── pihole.md           # Network-wide DNS ad blocking
+│   ├── wake-on-lan.md      # Remote power on/off from the Pi
+│   └── troubleshooting.md  # Problems I hit and how I fixed them
+├── scripts/
+│   ├── config.example.sh   # Template for real values (config.sh is gitignored)
+│   ├── wake-server.sh      # Send magic packet and wait for boot
+│   ├── shutdown-server.sh  # Shut down the server over SSH
+│   └── server-status.sh    # Check ping, SSH, and Jellyfin
+└── diagrams/               # Network diagram and screenshots
 ```
 
 ## What I Learned
